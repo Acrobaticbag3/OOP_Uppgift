@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 namespace OOP_Uppgift {
 
     class EnemyShip : ShipStats {
-        public EnemyShip() {
-            
-        }    
+        public EnemyShip(int weaponClass, int weaponRange, int aurmorClass, int hull, int systemIntegraty) : base(weaponClass, weaponRange, aurmorClass, hull, systemIntegraty) {
+           
+        }  
     }
 
 }
