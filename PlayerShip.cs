@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace OOP_Uppgift {
 
     class PlayerShip : ShipStats {
-        public PlayerShip(int weaponClass, int weaponRange, int aurmorClass, int hull, int systemIntegraty) : base(weaponClass, weaponRange, aurmorClass, hull, systemIntegraty) {
+        public PlayerShip(int weaponClass, int weaponRange, int armorClass, int hull, int systemIntegraty) : base(weaponClass, weaponRange, armorClass, hull, systemIntegraty) {
            
         }
     }

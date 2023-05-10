@@ -8,8 +8,7 @@ namespace OOP_Uppgift {
         static void Main(string[] args) {
 
             // === Ship Declerations === \\
-            PlayerShip playerShip;
-            EnemyShip enemyShip;
+            
 
             int currentTurn = 0;
 
@@ -30,15 +29,30 @@ namespace OOP_Uppgift {
             // === Stats Declerations === \\
             int Min = 1;
             int Max = 5;
-            Random rng = new Random();
-            int[] temp = Enumerable
-                .Repeat(Min, Max)
-                .Select(i => rng.Next(Min, Max))
-                .ToArray();
 
-            foreach (int element in temp) {
-                Console.WriteLine(element);
+            int hull = 500;
+            int integraty = 1000;
+
+            Random rng = new Random();
+
+            // === Player Stats Declerations === \\
+            int playerWeapon = rng.Next(Min, Max);
+            int playerRange = rng.Next(Min, Max);
+            int playerClass = rng.Next(Min, Max);
+
+            // === Enemy Stats Declerations === \\
+            int enemyWeapon = rng.Next(Min, Max);
+            int enemyRange = rng.Next(Min, Max);
+            int enemyClass = rng.Next(Min, Max);
+
+            PlayerShip playerShip = new PlayerShip(playerWeapon, playerRange, playerClass, hull, integraty);
+            EnemyShip enemyShip = new EnemyShip(enemyWeapon, enemyRange, enemyClass, hull, integraty);
+
+            for (int i = 1; i < 10; i++) {
+                Console.WriteLine(playerShip.Attack());
+                Console.WriteLine(enemyShip.Attack());   
             }
+            
         }
 
     }
