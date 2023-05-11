@@ -58,20 +58,22 @@ namespace OOP_Uppgift {
             
             switch (_armorClass) {
                 case 1:
-                    _armorClass = 100;      // maybe use return instead?
-                    break;
+                    Console.Write("Ships armor: ");     // Debug testing 
+                    return 2;      // maybe use return instead?
 
                 case 2:
-                    _armorClass = 200;      // maybe use return instead?
-                    break;
+                    Console.Write("Ships armor: ");     // Debug testing 
+                    return 3;      // maybe use return instead?
 
                 case 3:
-                    _armorClass = 300;      // maybe use return instead?
-                    break;
+                    Console.Write("Ships armor: ");     // Debug testing 
+                    return 4;      // maybe use return instead?
             }
 
             return 0;
         }
+
+        
     }
 
 }
