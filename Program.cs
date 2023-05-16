@@ -7,24 +7,6 @@ namespace OOP_Uppgift {
     public class Program {
         static void Main(string[] args) {
 
-            // === Ship Declerations === \\
-            int currentTurn = 0;
-
-            TurnState turnState = TurnState.PlayerTurn;
-            if (turnState == TurnState.PlayerTurn) {
-                
-
-            } else if(turnState == TurnState.EnemyTurn) {
-                
-
-            }
-            
-            StatsDecleration();
-            Console.ReadKey();
-        }
-
-        public static  void StatsDecleration() {
-            // === Stats Declerations === \\
             int Min = 1;
             int Max = 5;
 
@@ -46,17 +28,23 @@ namespace OOP_Uppgift {
             PlayerShip playerShip = new PlayerShip(playerWeapon, playerRange, playerarmorClass, hull, integraty);
             EnemyShip enemyShip = new EnemyShip(enemyWeapon, enemyRange, enemyarmorClass, hull, integraty);
 
-        /*  // ================= Debugging ================= \\
-            for (int i = 1; i < 10; i++) {
-                Console.WriteLine(playerShip.Attack());
-                Console.WriteLine(enemyShip.Attack());  
+            playerShip.CheckStats();
+            
 
-                Console.WriteLine(playerShip.SetAurmour());
-                Console.WriteLine(enemyShip.SetAurmour());
+            int currentTurn = 0;
 
-                Console.WriteLine(playerShip.CheckStats());   
+            TurnState turnState = TurnState.PlayerTurn;
+            if (turnState == TurnState.PlayerTurn) {
+                
+
+            } else if(turnState == TurnState.EnemyTurn) {
+                
+
             }
-        */  // ================= Debugging ================= \\ 
+            
+            Console.ReadKey();
+
+            
         }
 
     }

@@ -72,7 +72,6 @@ namespace OOP_Uppgift {
 
             return 0;
         }
-
         
     }
 

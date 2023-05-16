@@ -10,7 +10,8 @@ namespace OOP_Uppgift {
         private int wr;
         private int ac;
         private int hl;
-        private int si;    
+        private int si;  
+        private int score;  
         public PlayerShip(int weaponClass, int weaponRange, int armorClass, int hull, int systemIntegraty) : base(weaponClass, weaponRange, armorClass, hull, systemIntegraty) {
            wp = weaponClass;
            wr = weaponRange;
@@ -18,6 +19,17 @@ namespace OOP_Uppgift {
            hl = hull;
            si = systemIntegraty;
 
+        }
+
+        public void AddScore() {
+            score++;
+        }
+
+        public void Death() {     
+            if (hl <= 0) {
+                Console.WriteLine("Your ship becomes a lifeless drifting husk. Wheter because of ship wide system failiuer or crew casualty rates, the survivours are left to fend for them selves. Your fate becomes unknown");
+            } 
+            Console.WriteLine(score);
         }
 
         public bool CheckStats() {
