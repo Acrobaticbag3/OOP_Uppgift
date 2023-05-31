@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
+
 
 namespace OOP_Uppgift {
 
@@ -30,6 +32,10 @@ namespace OOP_Uppgift {
                 Console.WriteLine("Your ship becomes a lifeless drifting husk. Wheter because of ship wide system failiuer or crew casualty rates, the survivours are left to fend for them selves. Your fate becomes unknown");
             } 
             Console.WriteLine(score);
+
+            using (StreamWriter sr = new StreamWriter("Score.txt")) {
+                sr.WriteLine(score);
+            }
         }
 
         public bool CheckStats() {

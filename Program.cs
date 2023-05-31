@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading;
 using System.Diagnostics;
+using System.IO;
+
 
 namespace OOP_Uppgift {
 
